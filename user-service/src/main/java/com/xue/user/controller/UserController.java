@@ -21,8 +21,8 @@ public class UserController {
      */
     @GetMapping("/{id}")
     public User queryById(@PathVariable("id") Long id,
-                          @RequestHeader(value = "Truth", required = false) String truth) {
-        System.out.println("truth: " + truth);
+                          @RequestHeader(value = "headerKey", required = false) String headerKey) {
+        System.out.println("headerKey::" + headerKey);
         return userService.queryById(id);
     }
 }
