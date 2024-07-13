@@ -5,15 +5,9 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/cloud_order?useUnicode=true&amp;characterEncoding=UTF-8;useSSL=false
     username: root
-    password: admin
+    password: adminuser
   application:
     name: orderservice
-  cloud:
-    nacos:
-      server-addr: localhost:8848 # nacos服务地址
-      discovery:
-        cluster-name: BJ # 集群名称
-#        namespace: b5678e57-0183-44a6-b9b2-e89685ec4615 #dev环境
 mybatis:
   type-aliases-package: com.xue.user.pojo
   configuration:
@@ -23,10 +17,10 @@ logging:
     com.xue: debug
   pattern:
     dateformat: MM-dd HH:mm:ss:SSS
-#eureka:
-#  client:
-#    service-url:  # eureka的地址信息
-#      defaultZone: http://127.0.0.1:10086/eureka
+eureka:
+  client:
+    service-url:  # eureka的地址信息
+      defaultZone: http://127.0.0.1:10086/eureka
 
 userservice:
   ribbon:
