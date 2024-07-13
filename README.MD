@@ -7,3 +7,6 @@ http://localhost:8081/user/1
 
 order url:
 http://localhost:8080/order/101
+
+gateWay url:
+http://localhost:10010/order/101?authorization=admin
