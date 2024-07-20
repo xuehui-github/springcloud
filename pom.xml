@@ -50,19 +50,23 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <!-- mysql驱动 -->
+            <!-- mysql driver -->
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
                 <version>${mysql.version}</version>
             </dependency>
-            <!--mybatis-->
+            <!-- mybatis -->
             <dependency>
                 <groupId>org.mybatis.spring.boot</groupId>
                 <artifactId>mybatis-spring-boot-starter</artifactId>
                 <version>${mybatis.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis-spring</artifactId>
+                <version>${mybatis.apring.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
     <dependencies>
