@@ -1,5 +1,6 @@
 package com.xue.configure;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
 import org.springframework.core.annotation.Order;
@@ -12,11 +13,13 @@ import reactor.core.publisher.Mono;
 
 @Order(1)
 @Component
+@Slf4j
 public class AuthorizeFilter implements GlobalFilter {
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
         // 1.获取请求参数
         ServerHttpRequest request = exchange.getRequest();
+        log.info("this path is::{}",request.getURI());
         MultiValueMap<String, String> params = request.getQueryParams();
         // 2.获取参数中的 authorization 参数
         String auth = params.getFirst("authorization");
