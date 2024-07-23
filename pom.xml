@@ -28,6 +28,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>17</java.version>
         <spring-cloud.version>2023.0.2</spring-cloud.version>
+        <spring-data-jpa.version>3.2.6</spring-data-jpa.version>
         <mysql.version>5.1.47</mysql.version>
         <mybatis.version>3.0.3</mybatis.version>
         <mybatis.apring.version>3.0.3</mybatis.apring.version>
@@ -49,6 +50,11 @@
                 <version>2.2.5.RELEASE</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-jpa</artifactId>
+                <version>${spring-data-jpa.version}</version>
             </dependency>
             <!-- mysql driver -->
             <dependency>
