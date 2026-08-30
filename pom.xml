@@ -13,6 +13,7 @@
         <module>eureka-service</module>
         <module>gateway-service</module>
         <module>db-management</module>
+        <module>divisions-service</module>
     </modules>
 
     <packaging>pom</packaging>
